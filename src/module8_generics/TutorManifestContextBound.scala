@@ -8,7 +8,10 @@ object TutorManifestContextBound {
   // When type is defined as T:Manifest, compiler will look for
   // implicit Manifest[T] and use it to create objects
   // syntax: [T:Manifest]
-
+def createArrayBuffer[T:Manifest](f: T, s: T) = {
+  var arr = ArrayBuffer[T](f,s);
+  arr
+  }
   // TODO define method createArrayBuffer
   // TODO taking 2 parameters first and second of type T
   // TODO which creates ArrayBuffer of type T and returns it
